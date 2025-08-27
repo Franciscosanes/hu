@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cumpleaños Hugo P</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="script.js"></script>
+<body>
+  <div class="contenedor-principal">
+    <!-- aquí va TODO tu contenido visual -->
+  <div class="invitacion">
+    <div class="contenido">
+      <a href="#textura" class="boton-ingresar" onclick="PlayAudio()">Entrar al Paddock</a>
+    </div>
+  </div>
+  <div class="seccion-textura" id="textura">
+    <img src="hugu.jpg" alt="Textura decorativa" class="img-textura">
+  </div>
+  <div class="seccion-car-verde" id="cuenta">
+    <div class="contenido-ubicacion animado-scroll">
+      <img src="coco.jpg" alt="Cocodrilo" class="icono-cocodrilo">
+      <h2>Mis retratos</h2>
+      <p class="mensaje-retratos">
+        Aqui podrás encontrar algunos de mis momentos, desde fotografías reales hasta una versión en estilo Funko que refleja mi personalidad.
+      </p>
+      <div class="carrusel">
+        <img id="imagen-carrusel" src="hug1.jpg" alt="Retrato 1">
+      </div>
+    </div>
+  </div>
+
+  <div class="seccion-coc-verde" id="cuenta">
+    <div class="contenido-ubicacion animado-scroll">
+      <img src="prin.jpg" alt="Cocodrilo" class="icono-cocodrilo">
+      <h2>Lights out in...</h2>
+    <p class="mensaje-cuenta">
+  Calentando motores rumbo a la parrilla de salida...<br>
+  <strong>30 de Agosto de 2025, 7:00 pm</strong><br>
+  ¡Te espero!
+</p>
+      <div class="reloj">
+        <div><span id="dias2">0</span><small>días</small></div>
+        <div><span id="horas2">0</span><small>horas</small></div>
+        <div><span id="minutos2">0</span><small>minutos</small></div>
+        <div><span id="segundos2">0</span><small>segundos</small></div>
+      </div>
+    </div>
+  </div>
+  <div class="seccion-rec-verde" id="cuenta">
+    <div class="contenido-ubicacion animado-scroll">
+      <img src="ub.jpg" alt="Cocodrilo" class="icono-cocodrilo">
+      <h2>Ubicación del evento</h2>
+      <p><strong>Fecha:</strong> 30 de septiembre del 2025</p>
+  <p><strong>Hora:</strong> 7:00 pm</p>
+  <p><strong>Dirección:</strong><br>
+    <em>“Salón los Faroles”</em>
+  </p>
+      
+      <!-- Mapa embebido desde Google Maps -->
+      <div class="mapa-contenedor">
+        <iframe
+          src="https://www.google.com/maps?q=20.116588,-99.151091&hl=es&z=16&output=embed"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    
+      <!-- Botón para abrir en Apple Maps -->
+      <a href="https://maps.apple.com/?ll=20.116588,-99.151091&q=Ubicaci%C3%B3n%20marcada&t=h" 
+         target="_blank" class="boton-mapa">Cómo llegar</a>
+    </div>
+</div>
+
+
+
+<!-- Dress Code -->
+<div class="seccion-dress-verde" id="dresscode">
+  <div class="contenido-ubicacion animado-scroll">
+    <h2>Dress Code</h2>
+    <p class="mensaje-dress">
+      Aunque la temática general es <strong>F1 (Red Bull)</strong>, el código de vestimenta será
+      <strong>cowboy elegante</strong> — a <strong>Hugo Portillo</strong> le encanta y
+      además tendremos <strong>banda en vivo</strong>. 🤠🎺
+    </p>
+
+    <div class="grid-looks">
+      
+      <figure class="look">
+        <img src="hombre.jpg" alt="Ejemplo hombre estilo 'cowboy elegante'">
+      </figure>
+
+      <figure class="look">
+        <img src="mujer.jpg" alt="Ejemplo mujer estilo 'cowboy elegante'">
+      </figure>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="seccion-car-verde" id="cuenta">
+  <div class="contenido-ubicacion animado-scroll">
+    <img src="fj.jpg" alt="Cocodrilo" class="icono-cocodrilo">
+    <h2>Confirma tu asistencia</h2>
+    <p class="mensaje-confirmacion">
+      Tu presencia hará este día aún más especial para mí.<br>
+      Si puedes acompañarme, me llenará de alegría contar contigo.<br>
+      Y si deseas dedicarme unas palabras, estaré feliz de leerlas.
+    </p>
+    <section class="rsvp">
+      <form id="form-confirmacion">
+        <input type="text" placeholder="Tu nombre" required>
+        <!-- Campo de selección para número de acompañantes -->
+  <select name="acompanantes" required>
+    <option value="" disabled selected>Selecciona número de acompañantes</option>
+    <option value="0">0 (Voy solo/a)</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select>
+        <textarea placeholder="Mensaje o dedicatoria (opcional)"></textarea>
+        <button type="submit">Confirmar asistencia</button>
+      </form>
+      <div id="mensaje-exito"></div>
+  </section>
+  </div>
+</div>
+<footer class="footer-invitacion">
+  <div class="contenido-footer">
+    <p>
+      Gracias por ser parte de este momento tan especial en mi vida.<br>
+      <strong>Con cariño, Hugo Felipe Portillo Sánchez.</strong>
+    </p>
+  </div>
+</footer>
+<audio id="musica1" autoplay loop>
+  <source src="monaco.mp3" type="audio/mpeg">
+  Tu navegador no soporta reproducción de audio.
+</audio>
+</div>
+<script type="module" src="form.js"></script>
+</body>
+</html>
